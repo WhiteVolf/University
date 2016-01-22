@@ -1,2 +1,2 @@
-# Univercity
-Univercity project on Java
+# University
+University project on Java
