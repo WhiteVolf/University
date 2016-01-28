@@ -1,2 +1,12 @@
 # University
-University project on Java
+Java project.
+University:
+Unit
+-Group
+-Department
+-Speciality
+-Faculty
+
+Person
+-Student
+-Employee
