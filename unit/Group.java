@@ -1,6 +1,7 @@
 package university.unit;
 
 import java.util.Date;
+import java.util.List;
 
 import university.person.Employee;
 import university.person.Student;
@@ -8,7 +9,7 @@ import university.person.Student;
 public class Group extends StructuralUnit {
 
 	private Date dateOfCreation;
-	private Student[] students = {};
+	private List<Student> students;
 	private Specialty specialty;
 	private Employee curator;
 
@@ -49,20 +50,16 @@ public class Group extends StructuralUnit {
 		this.curator = curator;
 	}
 
-	public Student[] getStudents() {
+	public List<Student> getStudents() {
 		return students;
 	}
 	
 	public void addStudent(Student s) {
-		int len = this.students.length+1;
-		Student[] b = new Student[len];
-		System.arraycopy(this.students, 0, b, 0, this.students.length);
-		b[len-1] = s;
-		this.students = b;
+		this.students.add(s);
 	}
 	
 	public void removeStudent(Student s) {
-		
+		this.students.remove(s);
 	}
 
 	public short getYear(){

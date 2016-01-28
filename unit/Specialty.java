@@ -6,7 +6,7 @@ import university.person.Degree;
 
 public class Specialty extends StructuralUnit {
 	
-	private Group[] groups;
+	private List<Group> groups;
 	private Department department;
 	@SuppressWarnings("unused")
 	private List<Degree> degreeVariants;
@@ -24,16 +24,16 @@ public class Specialty extends StructuralUnit {
 		this.department = department;
 	}
 
-	public Group[] getGroups() {
+	public List<Group> getGroups() {
 		return groups;
 	}
 
 	public void addGroup(Group g) {
-		
+		this.groups.add(g);
 	}
 	
 	public void removeGroup(Group g) {
-		
+		this.groups.remove(g);
 	}
 	
 	public int getStudentsNumber(){

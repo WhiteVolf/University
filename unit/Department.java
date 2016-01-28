@@ -1,11 +1,13 @@
 package university.unit;
 
+import java.util.List;
+
 import university.person.Employee;
 
 public class Department extends StructuralUnit {
 
-	private Specialty[] specialties;
-	private Employee[] employees;
+	private List<Specialty> specialties;
+	private List<Employee> employees;
 	private Employee head;
 	private Faculty faculty;
 	
@@ -31,28 +33,28 @@ public class Department extends StructuralUnit {
 		this.faculty = faculty;
 	}
 
-	public Specialty[] getSpecialties() {
+	public List<Specialty> getSpecialties() {
 		return specialties;
 	}
 	
 	public void addSpecialty(Specialty s) {
-		
+		this.specialties.add(s);
 	}
 	
 	public void removeSpecialty(Specialty s) {
-		
+		this.specialties.remove(s);
 	}
 
-	public Employee[] getEmployees() {
+	public List<Employee> getEmployees() {
 		return employees;
 	}
 	
 	public void addEmployee(Employee e) {
-		
+		this.employees.add(e);
 	}
 	
 	public void removeEmployee(Employee e) {
-		
+		this.employees.remove(e);
 	}
 	
 	public int getStudentsNumber(){

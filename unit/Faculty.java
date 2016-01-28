@@ -1,13 +1,14 @@
 package university.unit;
 
 import java.util.Date;
+import java.util.List;
 
 import university.person.Employee;
 
 public class Faculty extends StructuralUnit{
 
 	private Date dateOfCreation;
-	private Department[] departmnets;
+	private List<Department> departmnets;
 	private Employee dean;
 	
 	public Faculty(String s, Date d, Employee e) {
@@ -37,16 +38,16 @@ public class Faculty extends StructuralUnit{
 		this.dean = dean;
 	}
 
-	public Department[] getDepartmnets() {
+	public List<Department> getDepartmnets() {
 		return departmnets;
 	}
 	
 	public void addDepartmnet(Department d) {
-		
+		this.departmnets.add(d);
 	}
 	
 	public void removeDepartmnet(Department d) {
-		
+		this.departmnets.remove(d);
 	}
 	
 	public int getStudentsNumber(){
