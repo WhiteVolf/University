@@ -71,9 +71,16 @@ public class Student extends Person {
 
 	@Override
 	public String toString() {
-		return "Student [getSex()=" + getSex() + ", getFirstName()=" + getFirstName() + ", getLastName()="
-				+ getLastName() + ", getAge()=" + getAge() + "]";
+		return "Student [" + getFirstName() + ", "
+				+ getLastName()+ ", " + getSex() +", " + getBirthDay() + "]";
 	}
+	
+	public String toDAO() {
+		return "Student [" + getFirstName() + ", "
+				+ getLastName()+ ", " + getSex() +", " + getBirthDay()  
+				+ ", " + getId() +"]";
+	}
+	
 
 	@Override
 	public void fire() {

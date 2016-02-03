@@ -1,8 +1,8 @@
 package university.common;
 
 public abstract class Persistable {
-	private static long counter;
-	private long id;
+	private static Integer counter;
+	private Integer id; 
 	
 	{
 		id = counter++;

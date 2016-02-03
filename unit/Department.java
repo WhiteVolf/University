@@ -1,12 +1,13 @@
 package university.unit;
 
 import java.util.List;
+import java.util.Set;
 
 import university.person.Employee;
 
 public class Department extends StructuralUnit {
 
-	private List<Specialty> specialties;
+	private Set<Specialty> specialties;
 	private List<Employee> employees;
 	private Employee head;
 	private Faculty faculty;
@@ -33,7 +34,7 @@ public class Department extends StructuralUnit {
 		this.faculty = faculty;
 	}
 
-	public List<Specialty> getSpecialties() {
+	public Set<Specialty> getSpecialties() {
 		return specialties;
 	}
 	

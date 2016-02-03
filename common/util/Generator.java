@@ -3,6 +3,8 @@ package university.common.util;
 import static university.person.Sex.*;
 
 import java.time.LocalDate;
+import java.util.Random;
+
 import university.person.Sex;
 
 public class Generator {
@@ -32,7 +34,8 @@ public class Generator {
 	}
 	
 	public static Sex getSex(){
-		return sexs[(int) Math.round(Math.random()+0.5)];
+		Random rnd = new Random();
+		return sexs[rnd.nextInt(2)];
 	}
 
 

@@ -1,12 +1,13 @@
 package university.unit;
 
 import java.util.List;
+import java.util.Set;
 
 import university.person.Degree;
 
 public class Specialty extends StructuralUnit {
 	
-	private List<Group> groups;
+	private Set<Group> groups;
 	private Department department;
 	@SuppressWarnings("unused")
 	private List<Degree> degreeVariants;
@@ -24,7 +25,7 @@ public class Specialty extends StructuralUnit {
 		this.department = department;
 	}
 
-	public List<Group> getGroups() {
+	public Set<Group> getGroups() {
 		return groups;
 	}
 
